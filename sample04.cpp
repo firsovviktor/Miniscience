@@ -78,6 +78,8 @@ int main(int argc, char **argv)
   std::set<std::string> args(argv, argv + argc);
   if(!args.count("-nopopup")) gmsh::fltk::run();
 
+  gmsh::write("ship.msh");
+
   gmsh::finalize();
   return 0;
 }
